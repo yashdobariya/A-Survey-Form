@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Survey Form</title>
+  </head>
+  <body class="main">
+    <div class="header">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking the time to fill up form</p>
+    </div>
+    <div class="form-div">
+      <form id="survey-form" action="">
+        <label for="fname" id="name-label">Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="fname"
+          placeholder="Entr your full name"
+          required 
+        />
+
+        <lable for="email" id="email-label">Email</lable>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required 
+        />
+
+        <lable for="number" id="number-label">Contact No.</lable>
+        <input
+          type="phone"
+          id="number"
+          min="9"
+          max="10"
+          name="number"
+          placeholder="Enter Your Mobile Number"
+          required 
+        />
+
+        <lable for="dropdown" id="dropdown-label">Select couses</lable>
+        <select id="dropdown">
+          <option value="JavaScript">JavaScript</option>
+          <option value="Python">Python</option>
+          <option value="Aws">Aws</option>
+        </select>
+
+        <fieldset>
+          <legend>Choose your language</legend>
+          <input type="radio" id="english" name="language" value="english" />
+          <lable for="English" >English</lable></br>
+          <input type="radio" id="hindi" name="language" value="hindi" />
+          <lable for="Hindi">Hindi</lable></br>
+          <input type="radio" id="gujarati" name="language" value="gujarati" />
+          <lable for="Gujarati">Gujarati</lable></br>
+        </fieldset>
+
+        <p>What is your intrest</p>
+        <input
+          type="checkbox"
+          id="front"
+          name="fornt"
+          value="Front-end Projects"
+        />
+        <lable for="front" id="fornt-label">Front-end Projects</lable></br>
+
+        <input
+          type="checkbox"
+          id="back"
+          name="back"
+          value="Back-end Projects"
+        />
+        <lable for="back" id="back-label">Back-end Projects</lable></br>
+
+        <input type="checkbox" id="devops" name"devops" value="Devops"  />
+        <lable for="devops" id="devops-label">Devops</lable></br></br>
+  
+
+        <label for="comment" id="comment-lable">Comment</label>
+        <textarea rows="4" cols="30" id="comment">Enter somthing here </textarea>
+        <button type="submit" value="Submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
