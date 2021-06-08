@@ -5,84 +5,97 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
     <title>Survey Form</title>
   </head>
-  <body class="main">
-    <div class="header">
-      <h1 id="title">Survey Form</h1>
-      <p id="description">Thank you for taking the time to fill up form</p>
-    </div>
-    <div class="form-div">
-      <form id="survey-form" action="">
-        <label for="fname" id="name-label">Full Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="fname"
-          placeholder="Entr your full name"
-          required 
-        />
-
-        <lable for="email" id="email-label">Email</lable>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required 
-        />
-
-        <lable for="number" id="number-label">Contact No.</lable>
-        <input
-          type="phone"
-          id="number"
-          min="9"
-          max="10"
-          name="number"
-          placeholder="Enter Your Mobile Number"
-          required 
-        />
-
-        <lable for="dropdown" id="dropdown-label">Select couses</lable>
-        <select id="dropdown">
-          <option value="JavaScript">JavaScript</option>
-          <option value="Python">Python</option>
-          <option value="Aws">Aws</option>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="center">Survey Form</h1>
+      <p class="description center">Thank you for taking the time to fill up form</p>
+    </header>
+    <form class="survey-form">
+      <div class="form-group">
+        <label  for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+      <div class="form-group">
+        <label  for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+      </div>
+      <div class="form-group">
+        <label for="number">Age<span class="sub-p">(optional)</span></label>
+        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+      </div>
+      <div class="form-group">
+        <p>Which option best describes your current role?</p>
+        <select  name="role" class="form-control" required>
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="job">Full Time Job</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to say</option>
+          <option value="other">Other</option>
         </select>
-
-        <fieldset>
-          <legend>Choose your language</legend>
-          <input type="radio" id="english" name="language" value="english" />
-          <lable for="English" >English</lable></br>
-          <input type="radio" id="hindi" name="language" value="hindi" />
-          <lable for="Hindi">Hindi</lable></br>
-          <input type="radio" id="gujarati" name="language" value="gujarati" />
-          <lable for="Gujarati">Gujarati</lable></br>
-        </fieldset>
-
-        <p>What is your intrest</p>
-        <input
-          type="checkbox"
-          id="front"
-          name="fornt"
-          value="Front-end Projects"
-        />
-        <lable for="front" id="fornt-label">Front-end Projects</lable></br>
-
-        <input
-          type="checkbox"
-          id="back"
-          name="back"
-          value="Back-end Projects"
-        />
-        <lable for="back" id="back-label">Back-end Projects</lable></br>
-
-        <input type="checkbox" id="devops" name"devops" value="Devops"  />
-        <lable for="devops" id="devops-label">Devops</lable></br></br>
-  
-
-        <label for="comment" id="comment-lable">Comment</label>
-        <textarea rows="4" cols="30" id="comment">Enter somthing here </textarea>
-        <button type="submit" value="Submit" id="submit">Submit</button>
-      </form>
-    </div>
+      </div>
+    
+      <div class="form-group">
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <label>
+          <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Definitely</label>
+        <label>
+          <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
+    
+        <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not sure</label>
+      </div>
+    
+      <div class="form-group">
+        <p>
+          What is your favorite feature of freeCodeCamp?
+        </p>
+        <select  name="mostLike" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="openSource">Open Source</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <p>
+          What would you like to see improved?
+          <span class="sub-p">(Check all that apply)</span>
+        </p>
+    
+        <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" checked />Front-end
+          Projects</label>
+        <label>
+          <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end Projects</label>
+        <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data
+          Visualization</label>
+        <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Challenges</label>
+        <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox" />Open Source
+          Community</label>
+        <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Gitter help
+          rooms</label>
+        <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />Videos</label>
+        <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />City Meetups</label>
+        <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Wiki</label>
+        <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Forum</label>
+        <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Additional
+          Courses</label>
+      </div>
+    
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    
+      <div class="form-group">
+        <button type="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+    </div>  
   </body>
 </html>
+
